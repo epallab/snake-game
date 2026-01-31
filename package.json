@@ -2,6 +2,7 @@
   "name": "snake-game",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://epallab.github.io/snake-game/",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
