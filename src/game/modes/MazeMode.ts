@@ -1,6 +1,6 @@
 import type { IGameMode } from './IGameMode';
 import type { IGameEngine } from '../IGameEngine';
-import { Snake } from '../Snake';
+import type { Snake } from '../Snake';
 import { Vector2 } from '../Vector2';
 import { AudioManager } from '../AudioManager';
 
@@ -170,7 +170,7 @@ export class MazeMode implements IGameMode {
         else if (head.y > h) { head.y = 0; teleported = true; }
 
         if (teleported) {
-            // Path continuity is now handled by Snake.getSegments(w, h)
+            // Path continuity is handled by getSegments
         }
     }
 

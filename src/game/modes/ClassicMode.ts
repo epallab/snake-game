@@ -12,7 +12,7 @@ export class ClassicMode implements IGameMode {
         if (engine.snake) engine.snake.speed = 200;
     }
 
-    update(deltaTime: number, engine: IGameEngine) {
+    update(_deltaTime: number, engine: IGameEngine) {
         // Increase difficulty based on score
         if (engine.snake) {
             // Base speed 200, +5 for every 100 points
@@ -38,11 +38,11 @@ export class ClassicMode implements IGameMode {
         return false;
     }
 
-    isPositionBlocked(pos: Vector2): boolean {
+    isPositionBlocked(_pos: Vector2): boolean {
         return false;
     }
 
-    onFoodEaten(engine: IGameEngine) {
+    onFoodEaten(_engine: IGameEngine) {
         // Classic just grows, logic handled in engine usually or here?
         // Engine handles basic score/growth. Mode handles side effects.
     }

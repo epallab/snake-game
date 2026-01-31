@@ -1,7 +1,7 @@
 import type { IGameMode } from './IGameMode';
 import type { IGameEngine } from '../IGameEngine';
-import { Snake } from '../Snake';
-import { Vector2 } from '../Vector2';
+import type { Snake } from '../Snake';
+import type { Vector2 } from '../Vector2';
 
 export class InfinityMode implements IGameMode {
     name = "Infinity";
@@ -39,16 +39,16 @@ export class InfinityMode implements IGameMode {
         ctx.setLineDash([]);
     }
 
-    checkCollision(): boolean {
+    checkCollision(_snake: Snake, _width: number, _height: number): boolean {
         // No wall collision
         return false;
     }
 
-    isPositionBlocked(): boolean {
+    isPositionBlocked(_pos: Vector2): boolean {
         return false;
     }
 
-    onFoodEaten() {
+    onFoodEaten(_engine: IGameEngine) {
         // No specific behavior
     }
 

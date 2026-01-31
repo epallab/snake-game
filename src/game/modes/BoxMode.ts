@@ -1,6 +1,6 @@
 import type { IGameMode } from './IGameMode';
 import type { IGameEngine } from '../IGameEngine';
-import { Snake } from '../Snake';
+import type { Snake } from '../Snake';
 import { Vector2 } from '../Vector2';
 
 export class BoxMode implements IGameMode {
@@ -111,11 +111,11 @@ export class BoxMode implements IGameMode {
         return false;
     }
 
-    isPositionBlocked(): boolean {
+    isPositionBlocked(_pos: Vector2): boolean {
         return false;
     }
 
-    onFoodEaten() {
+    onFoodEaten(_engine: IGameEngine) {
         // Maybe expand slightly on eat?
         this.padding = Math.max(10, this.padding - 5);
     }
